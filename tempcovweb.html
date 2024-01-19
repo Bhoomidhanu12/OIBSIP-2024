@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Temperature Converter</title>
+  <style>
+    body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color:blue;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.converter {
+  background-color:black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#result {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+    </style>
+    <script>
+        function convert(unit) {
+  const inputValue = parseFloat(document.getElementById('inputValue').value);
+  
+  if (isNaN(inputValue)) {
+    document.getElementById('result').innerText = 'Please enter a valid number.';
+    return;
+  }
+
+  let result;
+  if (unit === 'celsius') {
+    result = (inputValue - 32) * (5/9);
+    document.getElementById('result').innerText = `${inputValue}° Fahrenheit is approximately ${result.toFixed(2)}° Celsius.`;
+  } else if (unit === 'fahrenheit') {
+    result = (inputValue * (9/5)) + 32;
+    document.getElementById('result').innerText = `${inputValue}° Celsius is approximately ${result.toFixed(2)}° Fahrenheit.`;
+  }
+}
+
+        </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Converter</h1>
+    <div class="converter">
+      <input type="number" id="inputValue" placeholder="Enter temperature">
+      <div class="options">
+        <button onclick="convert('celsius')">Convert to Celsius</button>
+        <button onclick="convert('fahrenheit')">Convert to Fahrenheit</button>
+      </div>
+      <p id="result"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
