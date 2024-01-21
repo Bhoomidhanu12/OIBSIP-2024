@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible"content="IE-edge">
+    <meta name="viewport" content=""width=device-width,initial-scale=1.0">
+    <title>PORTFOLIO</title> 
+      <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Poppinns',sans-serif;
+        }
+      body{
+        background:#081b29;
+        color:#ededed;
+      }   
+      .header{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        padding:20px 10%;
+        background:transparent;
+        display: flex;
+        justify-content:space-between  ;
+        align-items: center;
+        z-index: index 100; ;
+      }
+      .logo{
+        font-size:25px;
+        color:#ededed;
+        text-decoration: none;
+        font-weight:600;
+    }
+    
+    .navbar a {
+        font-size: 18px;
+        color:#ededed;
+        font-weight:500;
+        margin-left:35px;
+        transition:5s;
+        text-decoration: none;
+    }
+    .navbar a:hover,
+    .navbar a.active{
+        color:blue;
+         
+    }
+    .home{
+        height:100vh;
+        display: flex ;
+        align-items:center;
+        padding:0 10%;
+    }
+    
+    .home-content{
+        background:transparent ;
+        max-width: 600;
+    }
+
+        .home-content  h1{
+          font-size: 70px; 
+          font-weight: 700; 
+          line-height: 1.2;
+        }
+     .home-content h3{
+        font-size: 56px;
+        font-weight: 700;
+        color:#00abf0;
+     }
+     .home-content p{
+        font-size:50px;
+        margin:20px 0 40px;
+     }
+     .home-content .btn-box{
+        display: flex;
+        justify-content: space-between;
+        width:345px;
+         height:50px;
+         background: #00abf0;
+     }
+     .btn-box a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width:150px;
+        height: 150%;
+        background:blue;
+        border: white;
+        border-radius: 8px;
+       font-size:19px;
+       color :white;
+       text-decoration: none;
+       font-weight: 600;
+       letter-spacing: 1px;
+       z-index:1;
+       overflow: hidden;
+       margin-top: 50px;
+       margin-top: 30px;
+    }
+    .btn-box a:hover{
+     background-color: #081b29;
+    }
+    img{
+      width:200px;
+      height:200px;
+      
+      border-radius: 50%;
+    }
+    table {
+              width: 100%;
+              border-collapse: collapse;
+            margin-top: 0;
+            padding-top: 0;
+              height: 30vh;
+            }
+        
+            th, td {
+              border: 1px solid #ddd;
+              padding: 8px;
+              text-align: left;
+            }
+        
+            th {
+              background-color:black;
+            }
+    
+a{
+  font-size: 40px;
+  color:white;
+  text-align: center;
+  text-shadow: #00abf0;
+  
+}
+
+.skills {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+h2{
+  text-align: center;
+  font-size: 30px;
+  color: #00abf0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.skill-bar {
+  height: 20px;
+  
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  width: 0;
+  background-color:blue;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 8px;
+  transition: width 0.5s;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  
+}
+.icon-container img{
+  
+  height: auto;
+  width: 50px;
+  height: 50px;
+
+}
+
+.section{
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color:black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color:#ddd;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  color: blue;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color:darkblue;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+   </style> 
+</head>
+<body>
+    <header class="header">
+        <a href="#"class="logo">Dharani Neelapuram</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+  </nav>
+</header>
+<section class="home"id="home">
+    <div class="Home-Content">
+      <img src="https://media.licdn.com/dms/image/D5603AQEhMQZ1icaPRA/profile-displayphoto-shrink_400_400/0/1705740202380?e=1710979200&v=beta&t=StzXZNNVK9uFFxBWP4CAhaf-rWrssnQqm2FDmUDk3_4"alt="">
+        <h1>Hi,I am DHARANI NEELAPURAM</h1>
+        <h3>FullStack Developer</h3>
+        <p>I am born and brought up from Tirupati.I am 2nd year student pursuing BTech(CSE) from KMM Institute Of Technology And Science(Affiliated to JNTUA).I have proffesional Communication and Leadership skills.I came from Time Management background of family.</p>
+        Talks about #leadership, #jobsearching, #worklifebalance, #careerdevelopment, and ##entreprenuership<div class="btn-box">
+            <a href="#">Hire Me</a>
+            <a href="#">Let's Talk</a>
+            </div>
+    </div>
+</section>
+<section class="Education"id="Education">
+<h2>EDUCATION</h2>
+
+
+          <table>
+            <tr>
+              <th>Degree</th>
+              <th>Institution</th>
+              <th>Year</th>
+            </tr>
+            <tr>
+              <td>Bachelor's in Computer Science</td>
+              <td>JNTU Anantapur</td>
+              <td>2023 - 2026</td>
+            </tr>
+            <tr>
+              <td>Blockchain Technology</td>
+              <td>NPTEL</td>
+              <td>2024</td>
+            </tr>
+            </table>
+            </div></section>
+            <section class="Skills"id="Skills">
+              <h2>Skills</h2>
+              <div class="skill">
+                <div class="skill-name">HTML&CSS</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 90%;"></div>
+                </div>
+                <div class="skill-name">PYTHON</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%;"></div>
+                </div>
+                <div class="skill-name">JAVASCRIPT</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%;"></div>
+                </div>
+                <div class="skill-name">JAVA</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 70%;"></div>
+                </div>
+                <div class="skill-name">DSA</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 80%;"></div>
+                </div>
+                <div class="skill-name">COMPUTER APPLICATIONS</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 95%;"></div>
+                </div>
+                <div class="skill-name">MS APPLICATIONS</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 98%;"></div>
+                </div>
+                <div class="skill-name">BLOCKCHAIN TECHNOLOGY</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 60%;"></div>
+                </div>
+                <div class="skill-name">C++</div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 50%;"></div>
+                </div>
+              </div>
+            </section>
+            
+              <section class="Contact"id="Contact">
+                <h2>CONTACT ME</h2>
+                <section class="contact-form">
+                  <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+              
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+              
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+              
+                    <input type="submit" value="Submit">
+                  </form>
+                
+                </section>
+                <div class="icon-container">
+                  <a href="https://www.linkedin.com/in/dharanineelapuram0419/"><img src="https://tse3.mm.bing.net/th?id=OIP.VArJwZMxFN-qHnD8Xue-QAHaHa&pid=Api&P=0&h=180"alt="linkedin icon"></a>
+                  <a href="https://chat.whatsapp.com/Fc7XXzv46Zh3YS1LV5Byyh"><img src="https://tse2.mm.bing.net/th?id=OIP.kgGUxYNGuKSSRmbrY7xu6AHaHa&pid=Api&P=0&h=180"alt="whatsapp_icon"></a>
+                  <a href="https://www.instagram.com/bhoomi_dhanu0419?igsh=MjluMWwyZjMycWpy"><img src="https://tse3.mm.bing.net/th?id=OIP.JGiIAKWl0mqS81VPZ76vBAAAAA&pid=Api&P=0&h=180"alt="instagram-icon"></a></div>    
+              </section>
+
+              
+</body>
+</html>
+

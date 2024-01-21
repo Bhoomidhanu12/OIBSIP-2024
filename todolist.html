@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      padding: 0;
+      background-image: url("https://tse3.mm.bing.net/th?id=OIP.mPLZUVrEcTkzgSMZfJ4DpQHaES&pid=Api&P=0&h=180");
+    background-size: cover;
+    background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #todo-container {
+      background-color:grey;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    button {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #reminder-input {
+      width: 70%;
+    }
+
+    #calendar-input {
+      width: 70%;
+    }
+  </style>
+</head>
+<body>
+
+<div id="todo-container">
+  <h2>To-Do List</h2>
+  <form id="todo-form">
+    <input type="text" id="task-input" placeholder="Add a task..." required>
+    <input type="text" id="reminder-input" placeholder="Set a reminder (e.g., 10:00 AM)">
+    <input type="date" id="calendar-input">
+    <button type="button" onclick="addTask()">Add Task</button>
+  </form>
+  <ul id="task-list"></ul>
+</div>
+
+<script>
+  function addTask() {
+    var taskInput = document.getElementById('task-input');
+    var reminderInput = document.getElementById('reminder-input');
+    var calendarInput = document.getElementById('calendar-input');
+
+    var taskList = document.getElementById('task-list');
+
+    var taskItem = document.createElement('li');
+    taskItem.innerHTML = `
+      <span>${taskInput.value}</span>
+      <span>${reminderInput.value}</span>
+      <span>${calendarInput.value}</span>
+      <button onclick="deleteTask(this)">Delete</button>
+    `;
+
+    taskList.appendChild(taskItem);
+
+    // Clear input fields
+    taskInput.value = '';
+    reminderInput.value = '';
+    calendarInput.value = '';
+  }
+
+  function deleteTask(button) {
+    var taskItem = button.parentNode;
+    var taskList = document.getElementById('task-list');
+    taskList.removeChild(taskItem);
+  }
+</script>
+
+</body>
+</html>
